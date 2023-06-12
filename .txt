@@ -1,0 +1,19 @@
+server.js:
+It imports the express and path modules.
+An instance of the Express application is created.
+The server listens on port 3000.
+The express.static middleware is used to serve static files from the public directory.
+A route is defined for the root ("/") URL, which sends the index.html file located in the public directory.
+When the server starts, it logs a message indicating that it is running.
+
+app.js:
+It declares variables inputBox and listContainer, which represent the input box element and the list container element, respectively, in the HTML file.
+The addTask() function is defined. It is called when the user clicks the "Add" button in the HTML file. This function checks if the input box is empty. If it is, an alert is displayed. Otherwise, a new (li) element is created and appended to the listContainer element, representing a new task. The input box value is cleared, and the saveData() function is called to save the updated list to the local storage.
+An event listener is added to the listContainer element to handle click events. When the user clicks on a list item (li), the function toggles the "checked" class on the clicked element to visually mark it as completed. If the user clicks on the delete button (span), the corresponding list item is removed from the DOM, and the saveData() function is called to update the list in the local storage.
+The saveData() function saves the list data to the local storage by setting the listContainer.innerHTML as the value of the "data" key.
+The showTask() function retrieves the saved list data from the local storage and displays it in the listContainer element.
+
+index.html:
+It defines the structure and layout of the to-do list application using HTML tags.
+The input-box and list-container elements represent the input box and the container for the list items, respectively.
+The file includes a reference to the style.css file for styling purposes and a reference to the app.js file at the end for the JavaScript functionality.
